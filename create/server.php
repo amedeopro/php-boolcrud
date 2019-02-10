@@ -17,11 +17,16 @@ VALUES ('$roomNumber', '$floor', '$beds', NOW(), NOW())";
 
   $result = $conn->query($sql);
 
-  if ($result) {
-    echo 'Record inserito correttamente';
-  } else {
+  if ($result) { ?>
+  <?php echo 'Record inserito correttamente'; ?>
+  <a href="http://localhost/php-boolcrud/">Torna alla home</a>
+  <a href="http://localhost/php-boolcrud/create/form.php">Inserisci un'altra stanza</a>
+  <?php  } else {
     echo 'KO';
   }
+?>
 
+
+<?php
   $conn->close();
  ?>
