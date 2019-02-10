@@ -12,6 +12,10 @@
   $floor = $_POST['floor'];
   $beds = $_POST['beds'];
 
+  if (empty($roomNumber) || empty($floor) || empty($beds)) {
+    die('Devi inserire tutti i campi');
+  }
+
   $sql = "INSERT INTO stanze (`room_number`, `floor`, `beds`, `created_at`, `updated_at`)
 VALUES ('$roomNumber', '$floor', '$beds', NOW(), NOW())";
 
