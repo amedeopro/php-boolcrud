@@ -5,8 +5,15 @@
 
 
   <div class="container">
-    <div class="cols-12">
-      <h1>Tutte le stanze</h1>
+    <div class="row">
+      <div class="col-12">
+        <h1>Tutte le stanze</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <a href="http://localhost/php-boolcrud/create/form.php" class="btn btn-primary"> Aggiungi una stanza</a>
+      </div>
     </div>
     <table class="table">
         <thead>
