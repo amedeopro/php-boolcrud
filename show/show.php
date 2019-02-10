@@ -4,24 +4,13 @@
 
 <?php
 
-  include '../env.php';
+  include '../function.php';
+  $room = findRoomById($_GET['id']);
 
-  $conn = new Mysqli($servername, $username, $password, $dbname);
-
-  if ($conn->connect_error) {
-    echo 'Errore: '. $conn->connect_error;
+  if (empty($room)) {
+    die('Id non trovato');
   }
 
-  $id = $_GET['id'];
-
-  $sql = "SELECT * FROM `stanze` WHERE `id` = $id LIMIT 1";
-
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {
-    $room = $result->fetch_assoc();
-
-  }
 ?>
 
 
@@ -43,6 +32,8 @@
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Piano: <?php echo $room['floor']; ?></li>
             <li class="list-group-item">Letti: <?php echo $room['beds']; ?></li>
+            <li class="list-group-item">Creata il: <?php echo $room['created_at']; ?></li>
+            <li class="list-group-item">Aggiornata il: <?php echo $room['updated_at']; ?></li>
           </ul>
         </div>
       </div>
