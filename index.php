@@ -5,6 +5,9 @@
 
 
   <div class="container">
+    <div class="cols-12">
+      <h1>Tutte le stanze</h1>
+    </div>
     <table class="table">
         <thead>
           <tr>
