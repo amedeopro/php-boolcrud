@@ -38,7 +38,7 @@
               <td><?php echo $room['updated_at']; ?></td>
               <td> <a href="http://localhost/php-boolcrud/show/show.php?id=<?php echo $room['id'] ?>" class="btn btn-secondary">Visualizza</a></td>
               <td> <a href="http://localhost/php-boolcrud/update/form.php?id=<?php echo $room['id'] ?>" class="btn btn-warning">Aggiorna</a></td>
-              <td> <a href="#" class="btn btn-danger">Elimina</a></td>
+              <td> <a href="http://localhost/php-boolcrud/delete/delete.php?id=<?php echo $room['id'] ?>" class="btn btn-danger">Elimina</a></td>
               </tr>
             <?php } ?>
 
