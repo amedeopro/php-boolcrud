@@ -13,9 +13,9 @@
   $floor = $_POST['floor'];
   $beds = $_POST['beds'];
 
-  if (empty($id) || empty($roomNumber) || empty($floor) || empty($beds)) {
-    die('Devi compilare tutti i campi');
-  }
+   if (empty($id) || empty($roomNumber) || empty($floor) || empty($beds)) {
+     die('Devi compilare tutti i campi');
+   }
 
   $sql = "UPDATE `stanze` SET `room_number` = '$roomNumber', `floor` = '$floor', `beds` = '$beds', `updated_at` = NOW() WHERE `id` = '$id';";
 
