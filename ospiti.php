@@ -10,7 +10,7 @@
   </div>
   <div class="row">
     <div class="col-12">
-      <a href="http://localhost/php-boolcrud/create/form.php" class="btn btn-primary"> Aggiungi un ospite</a>
+      <a href="http://localhost/php-boolcrud/create-ospiti/form.php" class="btn btn-primary"> Aggiungi un ospite</a>
     </div>
   </div>
   <div class="row">
