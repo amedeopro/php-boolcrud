@@ -5,10 +5,9 @@
     </div>
     <div class="b-navbar-right">
       <ul>
-        <li> <a href="#">Home</a> </li>
-        <li> <a href="#">About us</a> </li>
-        <li> <a href="#">How it Works</a> </li>
-        <li> <a href="#">Sign in</a> </li>
+        <li> <a href="http://localhost/php-boolcrud/">Home</a> </li>
+        <li> <a href="http://localhost/php-boolcrud/stanze.php">Stanze</a> </li>
+        <li> <a href="http://localhost/php-boolcrud/ospiti.php">Ospiti</a> </li>
       </ul>
     </div>
   </div>

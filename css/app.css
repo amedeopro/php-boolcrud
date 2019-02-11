@@ -10540,3 +10540,7 @@ table {
   width: 18rem;
 }
 
+.card img {
+  height: 190px;
+}
+
