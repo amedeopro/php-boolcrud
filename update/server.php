@@ -1,35 +1,43 @@
 <?php include "../partials/_head.php";  ?>
 <?php include "../partials/_navbar.php"; ?>
 
-<?php
+<div class="container">
 
-  include '../env.php';
+  <div class="row">
+    <div class="col-12">
+      <?php
 
-  $conn = new Mysqli($servername, $username, $password, $dbname);
+        include '../env.php';
 
-  if ($conn->connect_error) {
-    die('Si e verificato un errore');
-  }
+        $conn = new Mysqli($servername, $username, $password, $dbname);
 
-  $id = $_POST['id'];
-  $roomNumber = $_POST['room_number'];
-  $floor = $_POST['floor'];
-  $beds = $_POST['beds'];
+        if ($conn->connect_error) {
+          die('Si e verificato un errore');
+        }
 
-   if (empty($id) || empty($roomNumber) || empty($floor) || empty($beds)) {
-     die('Devi compilare tutti i campi');
-   }
+        $id = $_POST['id'];
+        $roomNumber = $_POST['room_number'];
+        $floor = $_POST['floor'];
+        $beds = $_POST['beds'];
 
-  $sql = "UPDATE `stanze` SET `room_number` = '$roomNumber', `floor` = '$floor', `beds` = '$beds', `updated_at` = NOW() WHERE `id` = '$id';";
+         if (empty($id) || empty($roomNumber) || empty($floor) || empty($beds)) {
+           die('Devi compilare tutti i campi');
+         }
 
-  $result = $conn->query($sql);
+        $sql = "UPDATE `stanze` SET `room_number` = '$roomNumber', `floor` = '$floor', `beds` = '$beds', `updated_at` = NOW() WHERE `id` = '$id';";
 
-  if ($result) {
-    echo "Stanza Aggiornata";
-  } else{
-    echo "Errore";
-  }
+        $result = $conn->query($sql);
 
- ?>
+        if ($result) {
+          echo "Stanza Aggiornata";
+        } else{
+          echo "Errore";
+        }
+
+       ?>
+    </div>
+  </div>
+
+</div>
 
 <?php include "../partials/_footer.php"; ?>
