@@ -21,7 +21,7 @@
     <div class="row">
       <div class="col-12">
         <form class="form-group" method="post" action="http://localhost/php-boolcrud/update/server.php">
-          <input type="hidden" name="id" value="<?php $room['id'] ?>">
+          <input type="hidden" name="id" value="<?php echo $room['id'] ?>">
           <div class="form-group">
             <label for="room_number">Numero Stanza</label>
             <input type="text" name="room_number" class="form-control" placeholder="Inserisci il numero della stanza" value="<?php echo $room['room_number'] ?>">

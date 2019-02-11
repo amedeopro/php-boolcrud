@@ -1,3 +1,6 @@
+<?php include "../partials/_head.php";  ?>
+<?php include "../partials/_navbar.php"; ?>
+
 <?php
 
   include '../env.php';
@@ -28,3 +31,5 @@
   }
 
  ?>
+
+<?php include "../partials/_footer.php"; ?>
