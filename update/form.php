@@ -1,6 +1,17 @@
 
 <?php include "../partials/_head.php";  ?>
 <?php include "../partials/_navbar.php"; ?>
+
+<?php
+
+  include "../function.php";
+
+  $id = $_GET['id'];
+
+  $room = findRoomById($id);
+
+?>
+
   <div class="container">
     <div class="row">
       <div class="col-12">
